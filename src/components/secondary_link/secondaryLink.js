@@ -1,10 +1,10 @@
 import React from "react";
 import {
-  SecondaryLinkText,
-  LinkContainer,
   ExternalLink,
-  InternalLink,
   HighlightHover,
+  InternalLink,
+  LinkContainer,
+  SecondaryLinkText,
 } from "./styled";
 
 const SecondaryLink = ({ content }) => {
@@ -14,7 +14,7 @@ const SecondaryLink = ({ content }) => {
     <LinkContainer>
       <HighlightHover>
         {isExternal ? (
-          <ExternalLink href={content.url}>
+          <ExternalLink target="_blank" href={content.url}>
             <SecondaryLinkText>{text} &#62;</SecondaryLinkText>
           </ExternalLink>
         ) : (

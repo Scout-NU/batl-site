@@ -3,7 +3,7 @@ import { Container } from "./styled";
 
 const NetworkLogos = ({ src }) => (
   <Container>
-    <img src={src} />
+    <img src={src} alt="Social media icons." />
   </Container>
 );
 

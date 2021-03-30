@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
+import ColorBanner from "../components/color_banner/colorBanner";
+import WhoWeAreHero from "../components/hero/whoWeAre/WhoWeAreHero";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { WHOWEARE_ID } from "../constants/constants";
-import apiService from "../service/apiService";
-import WhoWeAreHero from "../components/hero/whoWeAre/WhoWeAreHero";
-import ColorBanner from "../components/color_banner/colorBanner";
 import Team from "../components/team/team";
 import Timeline from "../components/timeline/timeline";
+import { WHOWEARE_ID } from "../constants/constants";
+import apiService from "../service/apiService";
 
 const WhoWeAre = () => {
   const [pageContent, setPageContent] = useState({});
@@ -21,6 +21,7 @@ const WhoWeAre = () => {
     hero,
     teamSectionHeading,
     staff,
+    affiliatedFaculty,
     timelineDescription,
     timeline,
     timelineImage,
@@ -31,7 +32,11 @@ const WhoWeAre = () => {
       <SEO title="Who We Are" />
       {hero && <WhoWeAreHero content={hero.fields} />}
       {teamSectionHeading && staff && (
-        <Team heading={teamSectionHeading} members={staff} />
+        <Team
+          heading={teamSectionHeading}
+          members={staff}
+          affiliatedFaculty={affiliatedFaculty}
+        />
       )}
       {timelineDescription && (
         <ColorBanner
