@@ -1,17 +1,17 @@
 import React from "react";
-import { H1, H2, P1 } from "../styles/styles";
+import DotGrid from "../../images/sprinkles/dot-grid.svg";
+import { H1, H2, RichText } from "../styles/styles";
 import {
   BleedBreakPoint,
-  Content,
-  Description,
-  ImageWrapper,
-  ContentDescription,
   Container,
+  Content,
+  ContentDescription,
+  Description,
   FlexWrapper,
-  SprinkleWrapper,
+  ImageWrapper,
   Sprinkle,
+  SprinkleWrapper,
 } from "./styled";
-import DotGrid from "../../images/sprinkles/dot-grid.svg";
 
 const MissionStatement = ({ content }) => {
   return (
@@ -21,25 +21,33 @@ const MissionStatement = ({ content }) => {
           <H2>Our Vision</H2>
           <H1>{content.statement}</H1>
           <Description className="d-block d-md-none">
-            <P1>{content.description}</P1>
+            <RichText document={content.richDescription} />
           </Description>
         </Container>
         <BleedBreakPoint>
           <Content>
             <Description className="col-xl-4">
-              <ContentDescription>{content.description}</ContentDescription>
+              <ContentDescription>
+                <RichText document={content.richDescription} />
+              </ContentDescription>
             </Description>
             <ImageWrapper className="col-xl-7">
-              <img alt={content.imageSrc.fileName} src={content.imageSrc.url} />
+              <img
+                alt={content.imageSrc.description}
+                src={content.imageSrc.file.url}
+              />
             </ImageWrapper>
           </Content>
         </BleedBreakPoint>
         <ImageWrapper className="d-block d-md-none mb-5 align-self-end">
-          <img alt={content.imageSrc.fileName} src={content.imageSrc.url} />
+          <img
+            alt={content.imageSrc.description}
+            src={content.imageSrc.file.url}
+          />
         </ImageWrapper>
         <SprinkleWrapper>
-            <Sprinkle src={DotGrid} />
-          </SprinkleWrapper>
+          <Sprinkle src={DotGrid} alt="" />
+        </SprinkleWrapper>
       </FlexWrapper>
     </>
   );

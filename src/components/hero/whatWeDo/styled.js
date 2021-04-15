@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import {
   MIN_LG_DESKTOP_SIZE,
+  MIN_MD_DESKTOP_SIZE,
   MIN_MOBILE_SIZE,
   MIN_SM_DESKTOP_SIZE,
-  MIN_MD_DESKTOP_SIZE,
   MIN_TABLET_SIZE,
   OVERLAY_ZINDEX,
 } from "../../../constants/constants";
@@ -90,7 +90,9 @@ export const FullBleedImage = styled.img.attrs({ className: "d-md-none" })`
   margin-bottom: 0;
 `;
 
-export const Sprinkle = styled.img`
+export const Sprinkle = styled.img.attrs({
+  alt: "A decorative element of three green outlined circles in a row.",
+})`
   position: absolute;
   right: 0;
   bottom: -53px;

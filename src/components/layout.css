@@ -591,6 +591,14 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+/* Northeastern Header */
+div[x-data="NUGlobalElements.header()"] {
+  position: fixed;
+  width: 100vw;
+  z-index: 4;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

@@ -1,33 +1,33 @@
 import styled from "styled-components";
-import { MIN_SM_DESKTOP_SIZE, 
-  MIN_MD_DESKTOP_SIZE, 
-  MIN_LG_DESKTOP_SIZE, 
-  MIN_TABLET_SIZE,
+import {
+  MIN_LG_DESKTOP_SIZE,
+  MIN_MD_DESKTOP_SIZE,
   MIN_MOBILE_SIZE,
-  OVERLAY_ZINDEX } from '../../constants/constants'
+  MIN_SM_DESKTOP_SIZE,
+  MIN_TABLET_SIZE,
+  OVERLAY_ZINDEX,
+} from "../../constants/constants";
 
 export const Images = styled.div.attrs({
   className: "col-12 p-0 d-flex",
 })`
   flex-wrap: wrap;
   justify-content: flex-start;
-
 `;
 
-export const ImageWrapper = styled.div.attrs({ className: "container my-5" })`
-`;
+export const ImageWrapper = styled.div.attrs({ className: "container my-5" })``;
 
 export const ColorSection = styled.div.attrs({
-    className: "container my-5 py-5",
+  className: "container my-5 py-5",
 })`
-    background-color: ${(props) => props.color};
+  background-color: ${(props) => props.color};
 `;
 
 export const SprinkleContainer = styled.div`
   position: relative;
 `;
-  
-export const Sprinkle = styled.img`
+
+export const Sprinkle = styled.img.attrs({ alt: "" })`
   position: absolute;
   right: -30px;
   width: 40px;

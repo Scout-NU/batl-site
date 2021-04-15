@@ -1,33 +1,33 @@
-import React, { useState, useEffect } from "react";
 import { navigate } from "gatsby";
-import apiService from "../../service/apiService";
+import React, { useEffect, useState } from "react";
 import {
+  CONTACT_LINK,
   FOOTER_ID,
   HOMEPAGE_LINK,
-  WHOWEARE_LINK,
   WHATWEDO_LINK,
-  CONTACT_LINK,
+  WHOWEARE_LINK,
 } from "../../constants/constants";
-import {
-  ColorBlock,
-  Container,
-  BigColumn,
-  Headline,
-  Row,
-  HalfRow,
-  FooterLink,
-  SmallColumn,
-  Icons,
-  Icon,
-  CTA,
-  Logo,
-} from "./styled";
-import { P1, P2 } from "../styles/styles";
+import BATL from "../../images/batl-white.png";
+import COS from "../../images/cos.png";
 import Facebook from "../../images/facebook.png";
 import Instagram from "../../images/instagram.png";
 import LinkedIn from "../../images/linkedin.png";
-import BATL from "../../images/batl-white.png";
-import COS from "../../images/cos.png";
+import apiService from "../../service/apiService";
+import { P1, P2 } from "../styles/styles";
+import {
+  BigColumn,
+  ColorBlock,
+  Container,
+  CTA,
+  FooterLink,
+  HalfRow,
+  Headline,
+  Icon,
+  Icons,
+  Logo,
+  Row,
+  SmallColumn,
+} from "./styled";
 
 const Footer = () => {
   const [content, setContent] = useState(null);
@@ -82,13 +82,28 @@ const Footer = () => {
             <Row>
               <Icons>
                 <a href={facebookUrl}>
-                  <Icon src={Facebook} />
+                  <Icon
+                    role="link"
+                    aria-label="Facebook Social Media Link"
+                    src={Facebook}
+                    alt="A facebook social media icon."
+                  />
                 </a>
                 <a href={instagramUrl}>
-                  <Icon src={Instagram} />
+                  <Icon
+                    role="link"
+                    aria-label="Instagram Social Media Link"
+                    src={Instagram}
+                    alt="An Instagram social media icon."
+                  />
                 </a>
                 <a href={linkedinUrl}>
-                  <Icon src={LinkedIn} />
+                  <Icon
+                    role="link"
+                    aria-label="LinkedIn Social Media Link"
+                    src={LinkedIn}
+                    alt="A LinkedIn social media icon."
+                  />
                 </a>
               </Icons>
             </Row>
@@ -102,10 +117,16 @@ const Footer = () => {
           <BigColumn>
             <Row>
               <HalfRow>
-                <Logo src={BATL} />
+                <Logo
+                  src={BATL}
+                  alt="The BATL logo, which is a beaker inside of a yellow circle."
+                />
               </HalfRow>
               <HalfRow>
-                <Logo src={COS} />
+                <Logo
+                  src={COS}
+                  alt="The Northeastern University College of Science logo"
+                />
               </HalfRow>
             </Row>
           </BigColumn>

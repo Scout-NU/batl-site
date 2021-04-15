@@ -46,7 +46,7 @@ const WhoWeAre = () => {
         />
       )}
       {timeline && timelineImage && (
-        <Timeline moments={timeline} image={timelineImage.fields.file.url} />
+        <Timeline moments={timeline} image={timelineImage.fields} />
       )}
     </Layout>
   );

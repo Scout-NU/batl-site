@@ -5,7 +5,6 @@ import {
   MIN_SM_DESKTOP_SIZE,
   MIN_TABLET_SIZE,
 } from "../../constants/constants";
-import { P1 } from "../styles/styles";
 
 export const ImageWrapper = styled.div.attrs({ className: "mb-5" })`
   float: right;
@@ -14,7 +13,7 @@ export const ImageWrapper = styled.div.attrs({ className: "mb-5" })`
 
   @media (min-width: ${MIN_TABLET_SIZE}) {
     width: 60%;
-  } 
+  }
 `;
 
 export const Description = styled.div.attrs({
@@ -59,14 +58,14 @@ export const Content = styled.div.attrs({
   }
 `;
 
-export const ContentDescription = styled(P1).attrs({ className: "pr-3" })``;
+export const ContentDescription = styled.span.attrs({ className: "pr-3" })``;
 
 export const Container = styled.div.attrs({ className: "container" })``;
 
 export const FlexWrapper = styled.div.attrs({
   className: "d-flex flex-column my-5",
 })`
-margin: 5% 0;
+  margin: 5% 0;
 `;
 
 export const SprinkleWrapper = styled.div`
@@ -74,36 +73,34 @@ export const SprinkleWrapper = styled.div`
 `;
 
 export const Sprinkle = styled.img`
-position: absolute;
-width: 80%;
-right: 26px;
-bottom: 30px;
-z-index: -1;
-
-@media (min-width: ${MIN_TABLET_SIZE}) {
-  width: 66%;
+  position: absolute;
+  width: 80%;
   right: 26px;
-  bottom: 65px;
-}
+  bottom: 30px;
+  z-index: -1;
 
-@media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
-  width: 74%;
-  right: 41px;
-  bottom: 100px;
-}
+  @media (min-width: ${MIN_TABLET_SIZE}) {
+    width: 66%;
+    right: 26px;
+    bottom: 65px;
+  }
 
-@media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
-  width: 59%;
-  right: 65px;
-  bottom: 27px;
-}
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
+    width: 74%;
+    right: 41px;
+    bottom: 100px;
+  }
 
-@media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
-     width: 690px;
+  @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
+    width: 59%;
+    right: 65px;
+    bottom: 27px;
+  }
+
+  @media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
+    width: 690px;
     right: 343px;
     bottom: 23px;
-    z-index: -1; 
-}
-
+    z-index: -1;
+  }
 `;
-

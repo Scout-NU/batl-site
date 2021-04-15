@@ -1,19 +1,19 @@
 import React from "react";
-import TimelineMoment from "./timeline_moment/timelineMoment";
+import FilledNavy from "../../images/sprinkles/filled-navy.svg";
+import FilledYellow from "../../images/sprinkles/filled-yellow.svg";
+import GreenWedge from "../../images/sprinkles/left-wedge-green.svg";
+import NavyWedge from "../../images/sprinkles/left-wedge-navy.svg";
+import YellowWedge from "../../images/sprinkles/left-wedge-yellow.svg";
+import OutlinedGreen from "../../images/sprinkles/outlined-green-large.svg";
+import OutlinedNavy from "../../images/sprinkles/outlined-navy-large.svg";
 import {
   Container,
-  Line,
   ImageContainer,
+  Line,
   MediumImage,
   Sprinkle,
 } from "./styled";
-import FilledYellow from "../../images/sprinkles/filled-yellow.svg";
-import FilledNavy from "../../images/sprinkles/filled-navy.svg";
-import OutlinedNavy from "../../images/sprinkles/outlined-navy-large.svg";
-import OutlinedGreen from "../../images/sprinkles/outlined-green-large.svg";
-import YellowWedge from "../../images/sprinkles/left-wedge-yellow.svg";
-import NavyWedge from "../../images/sprinkles/left-wedge-navy.svg";
-import GreenWedge from "../../images/sprinkles/left-wedge-green.svg";
+import TimelineMoment from "./timeline_moment/timelineMoment";
 
 const Timeline = ({ moments, image }) => {
   const sprinkles = [
@@ -40,7 +40,7 @@ const Timeline = ({ moments, image }) => {
       </Line>
       <ImageContainer>
         <Sprinkle src={FilledYellow} />
-        <MediumImage src={image} />
+        <MediumImage src={image.file.url} alt={image.description} />
       </ImageContainer>
     </Container>
   );

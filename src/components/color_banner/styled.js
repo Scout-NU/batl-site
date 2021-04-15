@@ -3,7 +3,7 @@ import {
   MIN_SM_DESKTOP_SIZE,
   MIN_TABLET_SIZE,
 } from "../../constants/constants";
-import { PRIMARY_YELLOW, H1, P1 } from "../styles/styles";
+import { H1, PRIMARY_YELLOW } from "../styles/styles";
 
 export const HideOverflow = styled.div`
   overflow-x: hidden;
@@ -16,7 +16,9 @@ export const Container = styled.div.attrs({
 `;
 
 export const Content = styled.div.attrs((props) => ({
-  className: `${!props.left && 'col-11'} ${props.wide ? 'col-md-9' : 'col-md-7 col-lg-6'}`,
+  className: `${!props.left && "col-11"} ${
+    props.wide ? "col-md-9" : "col-md-7 col-lg-6"
+  }`,
 }))`
   left: ${(props) => (props.left ? 0 : "8.33%")};
 
@@ -57,7 +59,7 @@ export const Heading = styled(H1)`
   }
 `;
 
-export const Columns = styled(P1)`
+export const Columns = styled.span`
   @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
     column-count: 2;
   }

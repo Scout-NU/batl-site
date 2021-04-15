@@ -30,8 +30,8 @@ export const SprinkleMedium = styled.img`
   transform: ${(props) =>
     props.variant
       ? "translate(9px, -12px);"
-      : "translate(-8px,-12px) scaleX(-1);"}
-  z-index: -1
+      : "translate(-8px,-12px) scaleX(-1);"};
+  z-index: -1;
 `;
 
 export const SprinkleSmall = styled.img`

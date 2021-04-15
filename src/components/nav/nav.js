@@ -1,26 +1,26 @@
 import { Link, navigate } from "gatsby";
 import React from "react";
 import {
-  LogoContainer,
-  NavContainer,
-  NavItem,
-  NavPages,
-  Logo,
-  NavButton,
-  NavLink,
-  FixedContainer,
-  OffsetBody,
-  StyledHeader
-} from "./styled";
+  CONTACT_LINK,
+  HOMEPAGE_LINK,
+  WHATWEDO_LINK,
+  WHOWEARE_LINK,
+} from "../../constants/constants";
 import * as logo from "../../images/batl-logo.svg";
 import { P1 } from "../styles/styles";
 import Hamburger from "./hamburger/hamburger";
 import {
-  HOMEPAGE_LINK,
-  WHOWEARE_LINK,
-  WHATWEDO_LINK,
-  CONTACT_LINK,
-} from "../../constants/constants";
+  FixedContainer,
+  Logo,
+  LogoContainer,
+  NavButton,
+  NavContainer,
+  NavItem,
+  NavLink,
+  NavPages,
+  OffsetBody,
+  StyledHeader,
+} from "./styled";
 
 const Nav = () => (
   <StyledHeader>
@@ -28,7 +28,10 @@ const Nav = () => (
       <NavContainer>
         <LogoContainer>
           <Link to={HOMEPAGE_LINK}>
-            <Logo src={logo} />
+            <Logo
+              src={logo}
+              alt="The BATL logo, which is a beaker inside of a yellow circle."
+            />
           </Link>
         </LogoContainer>
         <Hamburger className="col-2" />
@@ -67,7 +70,7 @@ const Nav = () => (
       </NavContainer>
     </FixedContainer>
     <OffsetBody />
-    </StyledHeader>
+  </StyledHeader>
 );
 
 export default Nav;

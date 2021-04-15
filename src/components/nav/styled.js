@@ -1,8 +1,7 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
 import { MAX_ZINDEX } from "../../constants/constants";
-
-import { TEXT_BLACK, PRIMARY_YELLOW } from "../styles/styles";
+import { PRIMARY_YELLOW, TEXT_BLACK } from "../styles/styles";
 
 export const NavButton = styled.button`
   background-color: transparent;
@@ -20,7 +19,10 @@ export const Logo = styled.img`
   margin-bottom: 0;
 `;
 
-export const NavContainer = styled.div.attrs({ className: "container align-items-center align-items-md-baseline pb-2 pb-md-0" })`
+export const NavContainer = styled.div.attrs({
+  className:
+    "container align-items-center align-items-md-baseline pb-2 pb-md-0",
+})`
   display: flex;
   justify-content: space-between;
   padding: 15px 0 0 0;
@@ -60,6 +62,7 @@ export const FixedContainer = styled.div.attrs({
   position: fixed;
   z-index: ${MAX_ZINDEX};
   background-color: white;
+  top: 48px; // Height of the Northeastern header
 `;
 
 export const OffsetBody = styled.div`
@@ -68,4 +71,4 @@ export const OffsetBody = styled.div`
 
 export const StyledHeader = styled.header`
   margin-bottom: -18px;
-`
+`;

@@ -1,3 +1,6 @@
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
+import React from "react";
 import styled from "styled-components";
 import { MIN_SM_DESKTOP_SIZE } from "../../constants/constants";
 
@@ -83,6 +86,16 @@ export const P2 = styled.p`
 export const SmallText = styled.small`
   font-family: "Open Sans", sans-serif;
 `;
+
+const options = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => <P1>{children}</P1>,
+  },
+};
+
+export const RichText = ({ document }) => {
+  return <>{documentToReactComponents(document, options)}</>;
+};
 
 // Images
 export const RoundImage = styled.img`

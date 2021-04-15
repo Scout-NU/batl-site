@@ -1,15 +1,14 @@
 import React from "react";
-import {
-  Image,
-  BottomImageContainer,
-  Container,
-} from "./styled";
+import { BottomImageContainer, Container, Image } from "./styled";
 const BottomImage = ({ content }) => {
-
   return (
     <Container>
       <BottomImageContainer>
-        <Image image={content.fields.file.url}></Image>
+        <Image
+          role="img"
+          aria-label={content.fields.description}
+          image={content.fields.file.url}
+        ></Image>
       </BottomImageContainer>
     </Container>
   );

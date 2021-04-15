@@ -6,7 +6,7 @@ import {
   MIN_TABLET_SIZE,
   OVERLAY_ZINDEX,
 } from "../../../constants/constants";
-import { PRIMARY_NAVY, BG_WHITE } from "../../styles/styles";
+import { BG_WHITE, PRIMARY_NAVY } from "../../styles/styles";
 
 export const ColorBlock = styled.div`
   color: ${BG_WHITE};
@@ -66,7 +66,7 @@ export const FullBleedImage = styled.img.attrs({ className: "d-md-none" })`
   margin-bottom: 0;
 `;
 
-export const Sprinkle = styled.img`
+export const Sprinkle = styled.img.attrs({ alt: "" })`
   position: absolute;
   right: 0;
   width: 40px;

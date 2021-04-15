@@ -1,17 +1,17 @@
 import styled from "styled-components";
 import {
   MIN_LG_DESKTOP_SIZE,
-  MIN_SM_DESKTOP_SIZE,
   MIN_MD_DESKTOP_SIZE,
   MIN_MOBILE_SIZE,
+  MIN_SM_DESKTOP_SIZE,
   MIN_TABLET_SIZE,
 } from "../../constants/constants";
 
 export const ColorBlockWrapper = styled.div.attrs({
-  className:"container-fluid p-0"
+  className: "container-fluid p-0",
 })`
-margin-bottom: 15%;
-`
+  margin-bottom: 15%;
+`;
 
 export const ColorSection = styled.div.attrs({
   className: "col-11 my-5 py-5",
@@ -31,7 +31,7 @@ export const OneColumn = styled.div.attrs({
 })``;
 
 export const Header = styled.div.attrs({
-  className: "col-sm-8 col-md-7 col-lg-9"   
+  className: "col-sm-8 col-md-7 col-lg-9",
 })`
   position: relative;
   top: -75px;
@@ -48,12 +48,12 @@ export const Header = styled.div.attrs({
   }
 
   @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
-    left: 50px;  
+    left: 50px;
     top: -200px;
   }
 
   @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
-    left: 68px;  
+    left: 68px;
     top: -198px;
   }
 
@@ -64,37 +64,37 @@ export const Header = styled.div.attrs({
 `;
 
 export const Header2 = styled.div.attrs({
-    className: "col-sm-8 col-md-7 col-lg-10"   
-  })`
-    position: relative;
-    top: -75px;
-    padding-left: 0 !important;
-  
-    @media (max-width: ${MIN_MOBILE_SIZE}) {
-      top: -80px;
-      left: 20px;
-    }
-  
-    @media (min-width: ${MIN_TABLET_SIZE}) {
-      top: -150px;
-      left: 40px;
-    }
-  
-    @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
-      top: -190px;
-      left: 50px;  
-    }
-  
-    @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
-      left: 68px;
-      top: -190px;
-    }
-  
-    @media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
-      top: -180px;
-      left: 120px;
-    }
-  `;
+  className: "col-sm-8 col-md-7 col-lg-10",
+})`
+  position: relative;
+  top: -75px;
+  padding-left: 0 !important;
+
+  @media (max-width: ${MIN_MOBILE_SIZE}) {
+    top: -80px;
+    left: 20px;
+  }
+
+  @media (min-width: ${MIN_TABLET_SIZE}) {
+    top: -150px;
+    left: 40px;
+  }
+
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
+    top: -190px;
+    left: 50px;
+  }
+
+  @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
+    left: 68px;
+    top: -190px;
+  }
+
+  @media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
+    top: -180px;
+    left: 120px;
+  }
+`;
 
 export const Content = styled.div.attrs({ className: "container" })`
   padding-left: 0 !important;
@@ -117,7 +117,10 @@ export const SprinkleContainer = styled.div`
   position: relative;
 `;
 
-export const SprinkleYellow = styled.img.attrs({className: 'd-md-block'})`
+export const SprinkleYellow = styled.img.attrs({
+  className: "d-md-block",
+  alt: "",
+})`
   position: absolute;
   width: 80px;
   right: 12px;
@@ -152,19 +155,21 @@ export const SprinkleYellow = styled.img.attrs({className: 'd-md-block'})`
     right: 175px;
     bottom: 250px;
   }
-`
+`;
 
-export const Sprinkle = styled.img.attrs({ className: "" })`
+export const Sprinkle = styled.img.attrs({
+  className: "",
+  alt: "",
+})`
   position: absolute;
   width: 80%;
   right: 9px;
   bottom: -1px;
   z-index: -1;
 
-
   @media (max-width: ${MIN_MOBILE_SIZE}) {
     right: 20px;
-    bottom: 0px; 
+    bottom: 0px;
   }
 
   @media (min-width: ${MIN_TABLET_SIZE}) {

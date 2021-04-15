@@ -13,7 +13,7 @@ const AffiliatedFaculty = ({ members }) => {
           <SecondaryLink
             content={{
               url: f.fields.profileUrl,
-              label: "Link",
+              label: "View Staff Page",
             }}
           />
         </Faculty>

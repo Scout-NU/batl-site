@@ -1,50 +1,50 @@
 import React from "react";
-import { H1, P1, H2 } from "../styles/styles";
+import DotGrid from "../../images/sprinkles/dot-grid.svg";
+import FilledYellow from "../../images/sprinkles/filled-yellow.svg";
+import { H1, H2, RichText } from "../styles/styles";
 import {
+  ColorBlockWrapper,
   ColorSection,
-  TwoColumn,
+  Container,
+  Content,
   Header,
   Header2,
   OneColumn,
-  Content,
-  Container,
-  ColorBlockWrapper,
   Sprinkle,
+  SprinkleContainer,
   SprinkleYellow,
-  SprinkleContainer
+  TwoColumn,
 } from "./styled";
-import DotGrid from "../../images/sprinkles/dot-grid.svg"
-import FilledYellow from "../../images/sprinkles/filled-yellow.svg";
 
 const Education = ({ content, color }) => {
-    return (
-      <>
+  return (
+    <>
       <ColorBlockWrapper className="container-fluid p-0">
-      <ColorSection color={color}>
-        <Container>
-        <Header2>
-          <H2>Education</H2>
-        </Header2>
+        <ColorSection color={color}>
+          <Container>
+            <Header2>
+              <H2>Education</H2>
+            </Header2>
             <Header>
               <H1>{content.heading}</H1>
             </Header>
-        </Container>
-        <Content>
-          <OneColumn>
-            <P1>{content.description}</P1>
-          </OneColumn>
-          <TwoColumn>
-            <P1>{content.description}</P1>
-          </TwoColumn>
-        </Content>
-      </ColorSection>
-      <SprinkleContainer>
-        <SprinkleYellow src={FilledYellow} />
-        <Sprinkle src={DotGrid} />
-      </SprinkleContainer>
+          </Container>
+          <Content>
+            <OneColumn>
+              <RichText document={content.richDescription} />
+            </OneColumn>
+            <TwoColumn>
+              <RichText document={content.richDescription} />
+            </TwoColumn>
+          </Content>
+        </ColorSection>
+        <SprinkleContainer>
+          <SprinkleYellow src={FilledYellow} />
+          <Sprinkle src={DotGrid} />
+        </SprinkleContainer>
       </ColorBlockWrapper>
-      </>
-    );
+    </>
+  );
 };
 
 export default Education;

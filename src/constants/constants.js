@@ -9,8 +9,8 @@ export const WHOWEARE_LINK = "/whoWeAre";
 export const WHATWEDO_LINK = "/whatWeDo";
 export const CONTACT_LINK = "/contact";
 
-export const MAX_ZINDEX = 100000000000000;
-export const OVERLAY_ZINDEX = 1000000;
+export const MAX_ZINDEX = 3;
+export const OVERLAY_ZINDEX = 3;
 
 export const MIN_MOBILE_SIZE = "576px";
 export const MIN_TABLET_SIZE = "768px";

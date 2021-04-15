@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { P1, RoundImage } from "../styles/styles";
+import { RoundImage } from "../styles/styles";
 
 export const Container = styled.div.attrs({ className: "row" })`
   margin: 5em 0;
@@ -20,11 +20,11 @@ export const Image = styled(RoundImage)`
   margin-bottom: 0;
 `;
 
-export const Bio = styled(P1).attrs({
+export const Bio = styled.span.attrs({
   className: "d-none d-md-block col-12 col-lg-8 pl-lg-4",
 })``;
 
-export const Sprinkle = styled.img`
+export const Sprinkle = styled.img.attrs({ alt: "" })`
   height: 100%;
   position: absolute;
   top: 0;

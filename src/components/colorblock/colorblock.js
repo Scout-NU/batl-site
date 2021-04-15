@@ -1,24 +1,25 @@
-import React from "react";
 import { navigate } from "gatsby";
-import { Button, H1, P1, P2, PRIMARY_GREY } from "../styles/styles";
-import {
-  ColorSection,
-  TwoColumn,
-  Header,
-  OneColumn,
-  Content,
-  ButtonText,
-  Container,
-  ColorBlockWrapper,
-  SprinkleYellow,
-  SprinkleNavy,
-  SprinkleContainer,
-} from "./styled";
+import React from "react";
 import FilledYellow from "../../images/sprinkles/filled-yellow.svg";
 import OutlinedNavy from "../../images/sprinkles/outlined-navy.svg";
+import { Button, H1, P2, PRIMARY_GREY, RichText } from "../styles/styles";
+import {
+  ButtonText,
+  ColorBlockWrapper,
+  ColorSection,
+  Container,
+  Content,
+  Header,
+  OneColumn,
+  SprinkleContainer,
+  SprinkleNavy,
+  SprinkleYellow,
+  TwoColumn,
+} from "./styled";
 
 const ColorBlock = ({ content, color }) => {
   const buttonContent = content.callToAction.fields;
+
   return (
     <ColorBlockWrapper className="container-fluid p-0">
       <ColorSection color={color}>
@@ -29,7 +30,7 @@ const ColorBlock = ({ content, color }) => {
         </Container>
         <Content>
           <OneColumn>
-            <P1>{content.description}</P1>
+            <RichText document={content.richDescription} />
             <Button
               className="mt-4"
               onClick={() => navigate(`${buttonContent.buttonLink}`)}
@@ -41,7 +42,7 @@ const ColorBlock = ({ content, color }) => {
             </Button>
           </OneColumn>
           <TwoColumn>
-            <P1>{content.description}</P1>
+            <RichText document={content.richDescription} />
             <Button
               className="mt-4"
               onClick={() => navigate(`${buttonContent.buttonLink}`)}

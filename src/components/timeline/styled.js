@@ -22,6 +22,7 @@ export const ImageContainer = styled.div`
 export const MediumImage = styled(RoundImage).attrs({ className: "col-8" })``;
 
 export const Sprinkle = styled.img.attrs({
+  alt: "A decorative element",
   className: "col-4 position-absolute",
 })`
   left: 50%;

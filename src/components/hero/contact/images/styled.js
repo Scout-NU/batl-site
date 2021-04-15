@@ -5,6 +5,7 @@ export const MediumImage = styled(RoundImage).attrs({
   className: "col-8",
 })`
   position: relative;
+  height: 100%;
 `;
 
 export const ImageContainer = styled.div.attrs({
@@ -46,7 +47,9 @@ export const Sprinkle = styled.div`
   left: 159px;
 `;
 
-export const SprinkleCircle = styled.img`
+export const SprinkleCircle = styled.img.attrs({
+  alt: "",
+})`
   position: absolute;
   width: 167px;
   z-index: -1;

@@ -1,10 +1,10 @@
-import styled from "styled-components";
 import { Link } from "gatsby";
-import { PRIMARY_NAVY, BG_WHITE, H1, Button } from "../styles/styles";
+import styled from "styled-components";
 import {
   MIN_SM_DESKTOP_SIZE,
   MIN_TABLET_SIZE,
 } from "../../constants/constants";
+import { BG_WHITE, Button, H1, PRIMARY_NAVY } from "../styles/styles";
 
 export const ColorBlock = styled.div`
   background-color: ${PRIMARY_NAVY};

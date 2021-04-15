@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { TEXT_BLACK, H3, RoundImage } from "../../styles/styles";
 import {
   MIN_SM_DESKTOP_SIZE,
   OVERLAY_ZINDEX,
 } from "../../../constants/constants";
+import { H3, RoundImage, TEXT_BLACK } from "../../styles/styles";
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -48,7 +48,7 @@ export const Graphic = styled.div.attrs({
   ${(props) => (props.indent === 0 ? "right" : "left")}: 0;
 `;
 
-export const Sprinkle = styled.img`
+export const Sprinkle = styled.img.attrs({ alt: "" })`
   position: absolute;
   ${(props) =>
     props.indent === 0
@@ -82,7 +82,9 @@ export const MobileImage = styled(RoundImage)`
   position: relative;
 `;
 
-export const MobileSprinkle = styled.img`
+export const MobileSprinkle = styled.img.attrs({
+  alt: "",
+})`
   position: absolute;
   ${(props) =>
     props.indent === 0

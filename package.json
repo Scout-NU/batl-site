@@ -9,6 +9,7 @@
     "Mckenna Poulos <mckennapoulos@gmail.com>"
   ],
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^14.1.2",
     "babel-plugin-styled-components": "^1.12.0",
     "bootstrap": "^4.3.1",
     "contentful": "^7.14.8",

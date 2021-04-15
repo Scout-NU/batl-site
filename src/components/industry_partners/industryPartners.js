@@ -1,14 +1,14 @@
 import React from "react";
+import Circles from "../../images/sprinkles/vertical-navy.svg";
+import Image from "./images/image";
 import {
+  ColorSection,
+  Container,
   Images,
   ImageWrapper,
-  ColorSection,
   Sprinkle,
   SprinkleContainer,
-  Container,
 } from "./styled";
-import Image from "./images/image";
-import Circles from "../../images/sprinkles/vertical-navy.svg";
 
 const IndustryPartners = ({ content, color }) => {
   return (
@@ -17,7 +17,11 @@ const IndustryPartners = ({ content, color }) => {
         <ImageWrapper>
           <Images>
             {content.map((image, i) => (
-              <Image key={i} content={image.fields.file.url} />
+              <Image
+                key={i}
+                content={image.fields.file.url}
+                alt={image.fields.description}
+              />
             ))}
           </Images>
         </ImageWrapper>

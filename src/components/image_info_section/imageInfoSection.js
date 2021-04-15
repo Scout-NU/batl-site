@@ -1,18 +1,19 @@
 import { navigate } from "gatsby";
 import React from "react";
-import { Button, H1, H2, P1, P2 } from "../styles/styles";
+import { Button, H1, H2, P2, RichText } from "../styles/styles";
 import Images from "./images/images";
 import {
-  Container,
-  ImagesContainer,
-  ContentContainer,
   ButtonText,
+  Container,
+  ContentContainer,
+  ImagesContainer,
 } from "./styled";
 
 const ImageInfoSection = ({ id, section, content, variant }) => {
   const buttonContent = content.callToAction
     ? content.callToAction.fields
     : null;
+
   return (
     <Container id={id}>
       <ImagesContainer>
@@ -21,7 +22,7 @@ const ImageInfoSection = ({ id, section, content, variant }) => {
       <ContentContainer>
         <H2>{section}</H2>
         <H1>{content.heading}</H1>
-        <P1>{content.description}</P1>
+        <RichText document={content.richDescription} />
         {buttonContent && (
           <Button
             className="mt-4"
